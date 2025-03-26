@@ -83,19 +83,20 @@ export default function ProteinStructureViewer({ controlsMinimizable = false }: 
 
         // Create NGL Stage object
         if (containerRef.current) {
-          stageInstance = new NGL.Stage(containerRef.current as HTMLElement)
+          const container = containerRef.current as HTMLElement
+          if (!container) {
+            throw new Error("Container element not found")
+          }
+          stageInstance = new NGL.Stage(container, {
+            backgroundColor: "white",
+            quality: "medium",
+          })
           setStage(stageInstance)
         }
 
         // Handle window resizing
         window.addEventListener("resize", () => {
           if (stageInstance) stageInstance.handleResize()
-        })
-
-        // Set quality and background
-        stageInstance.setParameters({
-          backgroundColor: "white",
-          quality: "medium",
         })
 
         // Load PDB structure

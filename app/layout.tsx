@@ -3,7 +3,7 @@
  * Provides global fonts, theme configuration, and basic HTML structure.
  */
 
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -27,18 +27,20 @@ const spaceGrotesk = Space_Grotesk({
 
 // Define metadata for SEO and page information using Next.js 14 metadata API
 export const metadata: Metadata = {
-  title: "POP2 Expression Research | CSU",
-  description: "Comparative analysis of human POP2 protein expression in E. coli and yeast systems",
-  generator: "v0.dev",
-  applicationName: "POP2 Research",
-  keywords: ["POP2", "protein expression", "E. coli", "yeast", "research", "CSU"],
-  authors: [{ name: "CSU Research Team" }],
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
+  title: "POP2 Research Project",
+  description: "Exploring protein optimization through computational methods",
+  authors: [{ name: "UiS Research Team" }],
+  keywords: ["protein optimization", "computational biology", "research"],
+}
+
+export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" }
+    { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 /**
@@ -47,9 +49,9 @@ export const metadata: Metadata = {
  */
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html 
       lang="en" 

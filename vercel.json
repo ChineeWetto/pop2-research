@@ -1,9 +1,10 @@
 {
   "version": 2,
   "buildCommand": "next build",
-  "installCommand": "npm install --force",
+  "devCommand": "next dev",
+  "installCommand": "pnpm install",
   "framework": "nextjs",
-  "regions": ["all"],
+  "regions": ["fra1"],
   "git": {
     "deploymentEnabled": {
       "main": true
@@ -36,7 +37,16 @@
       ]
     },
     {
-      "source": "/static/(.*)",
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
