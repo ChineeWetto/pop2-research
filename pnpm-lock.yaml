@@ -134,6 +134,9 @@ importers:
       ngl:
         specifier: ^2.2.0
         version: 2.4.0(@types/react@18.3.20)(fp-ts@2.16.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      postcss:
+        specifier: ^8.4.35
+        version: 8.5.3
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -158,9 +161,15 @@ importers:
       tailwind-merge:
         specifier: ^2.5.5
         version: 2.6.0
+      tailwindcss:
+        specifier: ^3.4.17
+        version: 3.4.17
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.17)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.8.2
       vaul:
         specifier: ^0.9.6
         version: 0.9.9(@types/react-dom@18.3.5(@types/react@18.3.20))(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -177,15 +186,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.3.5(@types/react@18.3.20)
-      postcss:
-        specifier: ^8.4.35
-        version: 8.5.3
-      tailwindcss:
-        specifier: ^3.4.17
-        version: 3.4.17
-      typescript:
-        specifier: ^5.3.3
-        version: 5.8.2
 
 packages:
 
