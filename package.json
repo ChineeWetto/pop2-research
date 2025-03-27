@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "pop2-research",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -51,6 +51,7 @@
     "next": "14.1.0",
     "next-themes": "^0.4.4",
     "ngl": "^2.2.0",
+    "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.2.0",
@@ -59,16 +60,15 @@
     "recharts": "^2.12.2",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.3.3",
     "vaul": "^0.9.6",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
-    "postcss": "^8.4.35",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.3.3"
+    "@types/react-dom": "^18.2.19"
   }
 }
